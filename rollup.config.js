@@ -1,9 +1,12 @@
+/* eslint-disable global-require */
+
 import babel from 'rollup-plugin-babel';
 import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
 import copy from 'rollup-plugin-copy';
 import replace from 'rollup-plugin-replace';
+import postcss from 'rollup-plugin-postcss';
 
 export default {
   input: 'src/index.jsx',
@@ -13,6 +16,14 @@ export default {
     sourcemap: true,
   },
   plugins: [
+    postcss({
+      extensions: ['.pcss'],
+      plugins: [
+        require('postcss-import'),
+        require('postcss-preset-env')({ stage: 3 }),
+        require('postcss-nested'),
+      ],
+    }),
     resolve({ extensions: ['.jsx', '.js'] }),
     commonjs(),
     replace({
