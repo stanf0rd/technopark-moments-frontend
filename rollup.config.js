@@ -25,7 +25,11 @@ export default {
       ],
     }),
     resolve({ extensions: ['.jsx', '.js'] }),
-    commonjs(),
+    commonjs({
+      namedExports: {
+        'node_modules/react/index.js': ['Component'],
+      },
+    }),
     replace({
       'process.env.NODE_ENV': JSON.stringify(process.env.BUILD),
     }),
