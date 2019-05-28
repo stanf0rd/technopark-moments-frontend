@@ -38,6 +38,7 @@ export default {
     }),
     copy({
       targets: [
+        'static',
         'src/index.html',
       ],
       outputFolder: 'dist',
