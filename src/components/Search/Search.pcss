@@ -1,13 +1,19 @@
 .search {
   height: 28px;
-  // width: 215px;
+  width: 215px;
   min-width: 125px;
 
   display: flex;
   justify-content: center;
-  flex: 1;
+  flex: 0 1 auto;
 
   &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
     box-sizing: border-box;
     padding: 5px;
 
@@ -20,6 +26,17 @@
     color: #999;
     font-size: 14px;
     font-weight: 300;
-    text-align: center;
   }
+
+  &__text {
+    padding-bottom: 1px;
+  }
+
+  &__icon {
+    margin-right: 6px;
+  }
+}
+
+.icon__search {
+  background-image: url(/static/img/search_icon.png);
 }
