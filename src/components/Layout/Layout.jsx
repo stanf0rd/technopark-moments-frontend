@@ -6,7 +6,7 @@ import './Layout.pcss';
 
 export default function Layout() {
   return (
-    <section id="root">
+    <section>
       <Headline />
     </section>
   );
