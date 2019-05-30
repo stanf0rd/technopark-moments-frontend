@@ -7,9 +7,9 @@ import Icon from '../Icon';
 export default function IconBlock() {
   return (
     <div className="iconblock">
-      <Icon type="explore" href="/explore" />
-      <Icon type="like" href="/like" />
-      <Icon type="profile" href="/profile" />
+      <Icon img="explore" href="/explore" />
+      <Icon img="like" href="/like" />
+      <Icon img="profile" href="/profile" />
     </div>
   );
 }

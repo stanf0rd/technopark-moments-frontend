@@ -2,8 +2,8 @@ import React from 'react';
 
 import './Icon.pcss';
 
-export default function Icon({ type, href }) {
-  const className = `icon__${type}`;
+export default function Icon({ img, href, size }) {
+  const className = `icon__${img} icon__${size || 'middle'}`;
   if (href) {
     return (
       <a className="icon__link-wrapper" href={href}>
