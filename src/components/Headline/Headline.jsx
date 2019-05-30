@@ -9,9 +9,11 @@ import Iconblock from '../Iconblock';
 export default function Headline() {
   return (
     <nav className="headline">
-      <Logo />
-      <Search />
-      <Iconblock />
+      <div className="headline__content">
+        <Logo />
+        <Search />
+        <Iconblock />
+      </div>
     </nav>
   );
 }
