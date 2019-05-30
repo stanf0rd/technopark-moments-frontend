@@ -18,6 +18,7 @@ export default {
   plugins: [
     postcss({
       extensions: ['.pcss'],
+      syntax: 'postcss-scss',
       plugins: [
         require('postcss-import'),
         require('postcss-preset-env')({ stage: 3 }),
