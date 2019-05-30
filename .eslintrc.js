@@ -20,8 +20,9 @@ module.exports = {
   ],
   rules: {
     // 'class-methods-use-this': ['error', { exceptMethods: [] }],
-    'no-console':'off',
-    'no-multi-spaces':'off',
+    'no-console': 'off',
+    'no-multi-spaces': 'off',
+    'react/prop-types': 'off',
     // 'linebreak-style':'off',
     // 'key-spacing': ['error', { 'mode': 'minimum' }],
     // 'no-prototype-builtins':'off',
