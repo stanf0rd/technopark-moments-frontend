@@ -3,6 +3,7 @@ import React from 'react';
 import './Moment.pcss';
 
 import Avatar from '../Avatar';
+import Icon from '../Icon';
 
 export default function Moment(props) {
   const { author, location } = props;
@@ -19,6 +20,7 @@ export default function Moment(props) {
           <a className="moment__author" href={author.link}>{author.name}</a>
           <a className="moment__location" href={locationHref}>{location}</a>
         </div>
+        <Icon img="options" size="middle" onClick={() => alert(1)} />
       </header>
     </article>
   );
