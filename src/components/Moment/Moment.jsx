@@ -6,7 +6,7 @@ import Avatar from '../Avatar';
 import Icon from '../Icon';
 
 export default function Moment(props) {
-  const { author, location } = props;
+  const { author, location, image } = props;
   const locationHref = `/location/${location}`;
   return (
     <article className="moment">
@@ -22,6 +22,11 @@ export default function Moment(props) {
         </div>
         <Icon img="options" size="middle" onClick={() => alert(1)} />
       </header>
+      <img
+        className="moment__image"
+        src={image.src}
+        alt={image.alt}
+      />
     </article>
   );
 }
