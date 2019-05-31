@@ -13,29 +13,9 @@ const mockMoments = [
       name: 'cat_with_brush',
     },
     location: 'Moscow, Russia',
-  },
-  {
-    id: 1,
-    author: {
-      avatar: '/static/img/user.png',
-      link: '/cat_with_brush',
-      name: 'cat_with_brush',
-    },
-  },
-  {
-    id: 2,
-    author: {
-      avatar: '/static/img/user.png',
-      link: '/cat_with_brush',
-      name: 'cat_with_brush',
-    },
-  },
-  {
-    id: 3,
-    author: {
-      avatar: '/static/img/user.png',
-      link: '/cat_with_brush',
-      name: 'cat_with_brush',
+    image: {
+      src: '/static/img/first_photo.jpg',
+      alt: 'Sky and skyscrapers',
     },
   },
 ];
