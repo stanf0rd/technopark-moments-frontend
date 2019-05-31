@@ -4,10 +4,42 @@ import './Feed.pcss';
 
 import Moment from '../Moment';
 
-export default function Main() {
+const mockMoments = [
+  {
+    author: {
+      avatar: '/static/img/user.png',
+      link: '/cat_with_brush',
+      name: 'cat_with_brush',
+    },
+    location: 'Moscow, Russia',
+  },
+  {
+    author: {
+      avatar: '/static/img/user.png',
+      link: '/cat_with_brush',
+      name: 'cat_with_brush',
+    },
+  },
+  {
+    author: {
+      avatar: '/static/img/user.png',
+      link: '/cat_with_brush',
+      name: 'cat_with_brush',
+    },
+  },
+  {
+    author: {
+      avatar: '/static/img/user.png',
+      link: '/cat_with_brush',
+      name: 'cat_with_brush',
+    },
+  },
+];
+
+export default function Feed() {
   return (
     <div className="feed">
-      <Moment />
+      {mockMoments.map(moment => <Moment {...moment} />)}
     </div>
   );
 }
