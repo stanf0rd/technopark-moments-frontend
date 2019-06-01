@@ -9,6 +9,7 @@ export default function Icon({
   onClick,
 }) {
   const className = `icon__${img} icon__${size || 'middle'}`;
+
   if (href) {
     return (
       <a className="icon__link-wrapper" href={href}>
