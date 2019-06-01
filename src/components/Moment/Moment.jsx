@@ -4,6 +4,7 @@ import './Moment.pcss';
 
 import Avatar from '../Avatar';
 import Icon from '../Icon';
+import Actions from '../Actions';
 
 export default function Moment(props) {
   const { author, location, image } = props;
@@ -27,6 +28,9 @@ export default function Moment(props) {
         src={image.src}
         alt={image.alt}
       />
+      <div className="moment__section moment__actions">
+        <Actions />
+      </div>
     </article>
   );
 }
