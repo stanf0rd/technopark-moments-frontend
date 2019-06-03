@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 
 import './Moment.pcss';
@@ -12,6 +13,7 @@ export default function Moment(props) {
     location,
     image,
     likesCount = 0,
+    comments,
   } = props;
   const locationHref = `/location/${location}`;
 
@@ -46,7 +48,13 @@ export default function Moment(props) {
       <div className="moment__section moment__description">
         <span className="moment__author">{author.name}</span>
         &nbsp;
-        <span>Странный комментарий</span>
+        <span>Странный личный комментарий</span>
+      </div>
+      <div className="moment__section">
+        <button type="button" className="moment__show-comments">
+          Посмотреть все комментарии
+          ({comments.count})
+        </button>
       </div>
     </article>
   );

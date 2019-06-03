@@ -18,6 +18,9 @@ const mockMoments = [
       alt: 'Sky and skyscrapers',
     },
     likesCount: 42034,
+    comments: {
+      count: 896,
+    },
   },
 ];
 
