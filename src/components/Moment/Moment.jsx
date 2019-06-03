@@ -6,10 +6,12 @@ import './Moment.pcss';
 import Avatar from '../Avatar';
 import Icon from '../Icon';
 import Actions from '../Actions';
+import Comment from '../Comment';
 
 export default function Moment(props) {
   const {
     author,
+    description,
     location,
     image,
     likesCount = 0,
@@ -45,10 +47,8 @@ export default function Moment(props) {
           &nbsp;отметок &quot;Нравится&quot;
         </div>
       </div>
-      <div className="moment__section moment__description">
-        <span className="moment__author">{author.name}</span>
-        &nbsp;
-        <span>Странный личный комментарий</span>
+      <div className="moment__section">
+        <Comment author={author} text={description} />
       </div>
       <div className="moment__section">
         <button type="button" className="moment__show-comments">
