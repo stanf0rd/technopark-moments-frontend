@@ -7,8 +7,14 @@ import Icon from '../Icon';
 import Actions from '../Actions';
 
 export default function Moment(props) {
-  const { author, location, image } = props;
+  const {
+    author,
+    location,
+    image,
+    likesCount = 0,
+  } = props;
   const locationHref = `/location/${location}`;
+
   return (
     <article className="moment">
       <header className="moment__header">
@@ -30,6 +36,17 @@ export default function Moment(props) {
       />
       <div className="moment__section moment__actions">
         <Actions />
+      </div>
+      <div className="moment__section">
+        <div className="moment__likes-count">
+          {likesCount}
+          &nbsp;отметок &quot;Нравится&quot;
+        </div>
+      </div>
+      <div className="moment__section moment__description">
+        <span className="moment__author">{author.name}</span>
+        &nbsp;
+        <span>Странный комментарий</span>
       </div>
     </article>
   );

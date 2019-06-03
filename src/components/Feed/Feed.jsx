@@ -17,6 +17,7 @@ const mockMoments = [
       src: '/static/img/first_photo.jpg',
       alt: 'Sky and skyscrapers',
     },
+    likesCount: 42034,
   },
 ];
 
