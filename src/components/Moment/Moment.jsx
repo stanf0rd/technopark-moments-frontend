@@ -9,15 +9,18 @@ import Actions from '../Actions';
 import Comment from '../Comment';
 import CommentBox from '../CommentBox';
 import CommentForm from '../CommentForm';
+import LikeInfo from '../LikeInfo';
 
 export default function Moment(props) {
   const {
+    id,
     author,
     description,
     location,
     image,
     comments,
     commentsCount,
+    whoLiked,
     likesCount = 0,
   } = props;
   const locationHref = `/location/${location}`;
@@ -47,10 +50,7 @@ export default function Moment(props) {
         <Actions />
       </div>
       <div className="moment__section">
-        <div className="moment__likes-count">
-          {likesCount}
-          &nbsp;отметок &quot;Нравится&quot;
-        </div>
+        <LikeInfo momentID={id} likesCount={likesCount} whoLiked={whoLiked} />
       </div>
       <div className="moment__section">
         <Comment author={author} text={description} />
