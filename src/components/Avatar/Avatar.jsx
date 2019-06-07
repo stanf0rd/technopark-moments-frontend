@@ -3,11 +3,11 @@ import React from 'react';
 import './Avatar.pcss';
 
 export default function Icon({ src, href, size }) {
-  const className = `avatar__${size || 'middle'}`;
+  const sizeClass = `avatar__${size || 'middle'}`;
   return (
-    <a className={`avatar ${className}`} href={href}>
+    <a className={`avatar ${sizeClass}`} href={href}>
       <img
-        className="avatar__img"
+        className={`avatar__img ${sizeClass}`}
         alt="User avatar"
         src={src}
       />
