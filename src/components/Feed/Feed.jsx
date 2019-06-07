@@ -17,10 +17,39 @@ const mockMoments = [
       src: '/static/img/first_photo.jpg',
       alt: 'Sky and skyscrapers',
     },
+    description: 'thats my skyscraper bro',
     likesCount: 42034,
-    comments: {
-      count: 896,
-    },
+    commentsCount: 896,
+    comments: [
+      {
+        id: 1,
+        author: {
+          avatar: '/static/img/user.png',
+          link: '/cat_with_brush',
+          name: 'cat_with_brush',
+        },
+        text: 'good skyscraper bro',
+      },
+      {
+        id: 2,
+        author: {
+          avatar: '/static/img/user.png',
+          link: '/cat_with_brush',
+          name: 'cat_with_brush',
+        },
+        text: 'yeah bro best of the best',
+      },
+      {
+        id: 3,
+        author: {
+          avatar: '/static/img/user.png',
+          link: '/cat_with_brush',
+          name: 'cat_with_brush',
+        },
+        text: 'i am so lonely in this angry world',
+        time: '10 минут назад',
+      },
+    ],
   },
 ];
 
