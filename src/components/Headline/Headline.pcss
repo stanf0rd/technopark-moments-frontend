@@ -1,8 +1,4 @@
 .headline {
-  order: 0;
-  flex-shrink: 0;
-  flex-basis: 75px;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -11,10 +7,12 @@
   background-color: #ffffff;
   transition: height .2s ease-in-out;
 
-  &__content {
-    position: fixed;
-    top: 0;
+  position: fixed;
+  top: 0;
 
+  width: 100%;
+
+  &__content {
     height: 77px;
     width: 100%;
     max-width: 1010px;
