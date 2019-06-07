@@ -8,7 +8,7 @@ export default function Comment({ author, text, id }) {
   return (
     <div className="comment">
       <span>
-        <span className="comment__author">{author.name}</span>
+        <a href={author.link} className="comment__author">{author.name}</a>
         &nbsp;
         <span>{text}</span>
       </span>
