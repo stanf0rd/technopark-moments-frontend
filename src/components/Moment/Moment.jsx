@@ -7,6 +7,8 @@ import Avatar from '../Avatar';
 import Icon from '../Icon';
 import Actions from '../Actions';
 import Comment from '../Comment';
+import CommentBox from '../CommentBox';
+import CommentForm from '../CommentForm';
 
 export default function Moment(props) {
   const {
@@ -14,10 +16,13 @@ export default function Moment(props) {
     description,
     location,
     image,
-    likesCount = 0,
     comments,
+    commentsCount,
+    likesCount = 0,
   } = props;
   const locationHref = `/location/${location}`;
+
+  console.log('here');
 
   return (
     <article className="moment">
@@ -50,11 +55,17 @@ export default function Moment(props) {
       <div className="moment__section">
         <Comment author={author} text={description} />
       </div>
-      <div className="moment__section">
-        <button type="button" className="moment__show-comments">
+      <div className="moment__section moment__show-comments">
+        <button type="button" className="moment__show-comments-button">
           Посмотреть все комментарии
-          ({comments.count})
+          ({commentsCount})
         </button>
+      </div>
+      <div className="moment__section">
+        <CommentBox comments={comments} />
+      </div>
+      <div className="moment__section moment__comment-form">
+        <CommentForm />
       </div>
     </article>
   );
