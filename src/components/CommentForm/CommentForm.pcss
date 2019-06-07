@@ -1,0 +1,31 @@
+.comment-form {
+  height: 56px;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__input {
+    height: 18px;
+
+    flex-grow: 1;
+
+    font-size: inherit;
+    font-weight: 400;
+    color: #999;
+
+    border: 0;
+    resize: none;
+    outline: none;
+  }
+
+  &__button {
+    display: inline;
+    color: #3897f0;
+    font-weight: 600;
+
+    &[disabled] {
+      opacity: .3;
+    }
+  }
+}
