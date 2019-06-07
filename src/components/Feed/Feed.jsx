@@ -19,6 +19,11 @@ const mockMoments = [
     },
     description: 'thats my skyscraper bro',
     likesCount: 42034,
+    whoLiked: {
+      avatar: '/static/img/user.png',
+      link: '/cat_with_brush',
+      name: 'cat_with_brush',
+    },
     commentsCount: 896,
     comments: [
       {
