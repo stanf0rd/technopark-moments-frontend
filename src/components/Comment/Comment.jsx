@@ -2,12 +2,21 @@ import React from 'react';
 
 import './Comment.pcss';
 
-export default function Comment({ author, text }) {
+import Button from '../Button';
+
+export default function Comment({ author, text, id }) {
   return (
-    <span>
-      <span className="comment__author">{author.name}</span>
-      &nbsp
-      <span>{text}</span>
-    </span>
+    <div className="comment">
+      <span>
+        <span className="comment__author">{author.name}</span>
+        &nbsp;
+        <span>{text}</span>
+      </span>
+      {id && (
+        <div className="comment__like">
+          <Button img="mini-like" size="small" />
+        </div>
+      )}
+    </div>
   );
 }
