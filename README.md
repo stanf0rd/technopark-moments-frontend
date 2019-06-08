@@ -1,5 +1,5 @@
 # Moments
-Frontend-part of the new task for web-technologies courses in Technopark .
+Frontend-part of the new task for web-technologies courses in Technopark.  
 Fully referenced by Instagram
 
 ## Technologies
